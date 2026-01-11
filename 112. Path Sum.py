@@ -30,7 +30,6 @@ class Solution:
         def check(root, sum):
             if root is not None:
                 sum += root.val
-                print("sum", sum, targetSum)
                 if sum == targetSum and root.left is None and root.right is None:
                     return True
                 left = check(root.left, sum)
@@ -38,7 +37,6 @@ class Solution:
                 if left == True or right ==True:
                     return True
             return False
-
         return check(root, 0)
 
 
